@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ms-toolsai.jupyter",
+        "github.copilot",
+        "matangover.mypy",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.python"
+    ]
+}

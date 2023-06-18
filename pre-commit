@@ -1,0 +1,19 @@
+#!/bin/sh
+
+check_command() {
+    # Run command and check if it fails. If it fails, print output and continue.
+    # If it succeeds, suppress output and continue.
+    output=$("$@" 2>&1)
+    status=$?
+    if [ $status -ne 0 ]; then
+        echo "$output"
+    fi
+
+    return $status
+}
+
+# Formatting
+check_command black --check --line-length 100 mypkg scripts
+check_command isort --check --profile black mypkg scripts
+# Typing
+check_command mypy --strict mypkg scripts
