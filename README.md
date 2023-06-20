@@ -9,6 +9,10 @@ When making a new repository, copy the contents of this directory to your new re
 - `.github/workflows/checks.yaml`
 - `pre-commit` (and subsequently your local `.git/hooks/pre-commit` file)
 
+## Dislosure level
+
+You must set the disclosure level of your repository in `ACCESS.md`, listing all parties that can access the project. See [disclosure levels](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy) for more information.
+
 ## Installation
 
 From the root of the repository, run
