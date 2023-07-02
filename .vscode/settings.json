@@ -13,7 +13,11 @@
     ],
     "isort.args": [
         "--profile",
-        "black"
+        "black",
+        "--project",
+        "mypkg",
+        "--thirdparty",
+        "wandb",
     ],
     "editor.codeActionsOnSave": {
         "source.organizeImports": true

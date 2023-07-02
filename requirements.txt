@@ -1,1 +1,7 @@
+# TODO: Pin versions, based on typical dev/prod environment
 torch
+torchvision
+pydantic
+wandb
+fire
+tqdm
