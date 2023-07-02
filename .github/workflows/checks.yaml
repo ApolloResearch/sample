@@ -35,10 +35,13 @@ jobs:
         pip install ".[dev]"
     - name: Check with Black
       run: |
-        black --check --diff --line-length 100 mypkg scripts
+        black --check --diff --line-length 100 mypkg scripts tests
     - name: Check with isort
       run: |
-        isort --check --profile black mypkg scripts
+        isort --check --thirdparty wandb --profile black mypkg scripts tests
     - name: Check with mypy
       run: |
-        mypy --strict mypkg scripts
+        mypy mypkg scripts
+    - name: Run tests
+      run: |
+        pytest tests

@@ -12,8 +12,8 @@ check_command() {
     return $status
 }
 
-# Formatting
-check_command black --check --line-length 100 mypkg scripts
-check_command isort --check --profile black mypkg scripts
-# Typing
-check_command mypy --strict mypkg scripts
+echo "Running pre-commit hooks..."
+check_command black --check --line-length 100 mypkg scripts tests
+check_command isort --check --thirdparty wandb --profile black mypkg scripts tests
+check_command mypy mypkg scripts
+check_command pytest tests

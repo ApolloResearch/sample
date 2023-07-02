@@ -13,11 +13,13 @@ setup(
     description="Sample repository using Apollo best engineering practices",
     long_description=Path("README.md").read_text("utf-8"),
     author="<your_name>",
-    author_email="<your_email>@apolloresearch.ai",
+    author_email="<your_email>",
     url="https://github.com/ApolloResearch/sample",
-    packages=find_packages(where="mypkg"),
+    packages=find_packages(),
     install_requires=requirements,
-    extras_require={"dev": ["black", "isort", "mypy"]},
+    extras_require={
+        "dev": ["black", "isort", "mypy", "pylint", "pytest", "types-PyYAML", "types-tqdm"]
+    },
     classifiers=[
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
