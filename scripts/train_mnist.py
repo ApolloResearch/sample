@@ -1,5 +1,7 @@
 """Train a model on MNIST.
 
+This script takes ~40 seconds to run for 3 layers and 15 epochs on a CPU.
+
 Usage:
     python scripts/train_mnist.py <path/to/config.yaml>
 """
