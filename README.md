@@ -1,13 +1,14 @@
 # Sample project
 
-This is a sample project that uses the solid engineering practices described in [Apollo Engineering Guide](https://docs.google.com/document/d/1O6qFI93XjZPIltSELs18v8jEIOclvOinQsRCQkmsD64/edit#heading=h.vznvxqme70zl).
+This is a sample project that uses the engineering practices described in [Apollo Engineering Guide](https://docs.google.com/document/d/1O6qFI93XjZPIltSELs18v8jEIOclvOinQsRCQkmsD64/edit#heading=h.vznvxqme70zl).
 
-When making a new repository, copy the contents of this directory to your new repository. You will need to rename `mypkg` to the name of your package in the following places:
+If you wish to use this repository as a template for your project, copy the contents of this directory to your new repository and run
 
-- The `mypkg` directory name
-- `setup.py`
-- `.github/workflows/checks.yaml`
-- `pre-commit` (and subsequently your local `.git/hooks/pre-commit` file)
+```bash
+./setup_pkg.sh <name_of_your_package>
+```
+
+with the name of your package as the argument. This will rename the package and set up the pre-commit hooks. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
 
 ## Dislosure level
 
