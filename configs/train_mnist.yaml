@@ -1,5 +1,4 @@
 seed: 0
-log_filename: train_mnist.log
 model:
   hidden_sizes:
     - 100
