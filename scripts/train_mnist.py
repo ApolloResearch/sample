@@ -44,7 +44,6 @@ class WandbConfig(BaseModel):
 
 class Config(BaseModel):
     seed: int
-    log_filename: str
     model: ModelConfig
     train: TrainConfig
     wandb: Optional[WandbConfig]

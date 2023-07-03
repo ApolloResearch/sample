@@ -22,7 +22,7 @@ def setup_logger(logfile: Path = DEFAULT_LOGFILE) -> logging.Logger:
         >>> logger.warning('Warning message')
     """
     if not logfile.parent.exists():
-        logfile.mkdir(parents=True, exist_ok=True)
+        logfile.parent.mkdir(parents=True, exist_ok=True)
 
     logging_config = {
         "version": 1,
