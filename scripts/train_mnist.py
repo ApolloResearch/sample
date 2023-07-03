@@ -124,7 +124,7 @@ def train(config: Config) -> None:
                 )
 
                 if config.wandb:
-                    wandb.log({"train/loss": loss.item(), "train/samples": samples})
+                    wandb.log({"train/loss": loss.item(), "train/samples": samples}, step=samples)
 
         if config.train.save_every_n_epochs and (epoch + 1) % config.train.save_every_n_epochs == 0:
             save_model(json.loads(config.model_dump_json()), save_dir, model, epoch)
