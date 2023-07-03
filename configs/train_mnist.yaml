@@ -7,7 +7,7 @@ train:
   learning_rate: 0.001
   batch_size: 64
   epochs: 15
-  save_dir:
+  save_dir: null
   save_every_n_epochs: null
 wandb:
   project: mlp-mnist
