@@ -16,7 +16,7 @@ new_package_name=$1
 OS=$(uname)
 
 # List of file types
-file_types=("*.md" "*.py" "*.yaml" "*.json" "pre-commit")
+file_types=("*.md" "*.py" "*.yaml" "*.json")
 
 # Loop over each file type
 for file_type in "${file_types[@]}"; do
