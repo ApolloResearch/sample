@@ -18,7 +18,16 @@ setup(
     packages=find_packages(),
     install_requires=requirements,
     extras_require={
-        "dev": ["black", "isort", "mypy", "pylint", "pytest", "types-PyYAML", "types-tqdm"]
+        "dev": [
+            "black",
+            "isort",
+            "mypy",
+            "pylint",
+            "pytest",
+            "types-PyYAML",
+            "types-tqdm",
+            "pre-commit",
+        ]
     },
     classifiers=[
         "Programming Language :: Python :: 3.8",
