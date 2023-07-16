@@ -3,7 +3,7 @@
 # This script does the following:
 # 1. Replaces all instances of the string 'mypkg' with the first argument provided
 # 2. Renames the mypkg directory to the first argument provided
-# 3. Copies the pre-commit file to .git/hooks/pre-commit
+# 3. Copies the pre-commit file to .git/hooks/pre-commit and makes it executable
 
 if [ $# -eq 0 ]; then
     echo "No arguments provided. Please provide the new package name."
@@ -33,3 +33,4 @@ mv mypkg $new_package_name
 
 # Use the provided pre-commit file
 cp .pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
