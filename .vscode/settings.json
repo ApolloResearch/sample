@@ -35,4 +35,6 @@
     "notebook.output.textLineLimit": 3000, // Prevent long output from being truncated
     "jupyter.interactiveWindow.creationMode": "perFile",
     "notebook.formatOnSave.enabled": true,
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.wrappingColumn": 100,
 }
