@@ -1,43 +1,62 @@
-from typing import List, Tuple
+from typing import Tuple
 
 import pytest
 from torch import nn
 
 from mypkg.models import MLP
+from mypkg.models.mlp import Layer
 
 
 @pytest.mark.parametrize(
-    "input_size, hidden_sizes, output_size, expected_layer_sizes",
+    "hidden_sizes, bias, expected_layer_sizes",
     [
-        (784, [128, 64], 10, [(784, 128), (128, 64), (64, 10)]),  # 2 hidden layers
-        (784, [], 10, [(784, 10)]),  # no hidden layers
-        (784, [128], 10, [(784, 128), (128, 10)]),  # 1 hidden layer
-        (784, [128, 64, 32], 10, [(784, 128), (128, 64), (64, 32), (32, 10)]),  # 3 hidden layers
+        # 2 hidden layers, bias False
+        ([4, 3], False, [(3, 4), (4, 3), (3, 4)]),
+        # no hidden layers, bias True
+        ([], True, [(3, 4)]),
+        # 1 hidden layer, bias True
+        ([4], True, [(3, 4), (4, 4)]),
     ],
 )
-def test_make_layers(
-    input_size: int,
-    hidden_sizes: List[int],
-    output_size: int,
-    expected_layer_sizes: List[Tuple[int, int]],
-):
-    """Test the _make_layers method of MLP class.
+def test_mlp_layers(
+    hidden_sizes: list[int],
+    bias: bool,
+    expected_layer_sizes: list[Tuple[int, int]],
+) -> None:
+    """Test the MLP constructor for fixed input and output sizes.
 
-    Verifies the returned layers' types and sizes.
+    Verifies the created layers' types, sizes and bias.
+
+    Args:
+        hidden_sizes: A list of hidden layer sizes. If None, no hidden layers are added.
+        bias: Whether to add a bias to the Linear layers.
+        expected_layer_sizes: A list of tuples where each tuple is a pair of in_features and
+            out_features of a layer.
     """
-    layers = MLP.make_layers(input_size, hidden_sizes, output_size)
-    assert isinstance(layers, nn.Sequential)
-    # Multiply by 2 for ReLU layers and subtract 1 as there's no ReLU after last Linear layer
-    assert len(layers) == len(expected_layer_sizes) * 2 - 1
+    input_size = 3
+    output_size = 4
+    model = MLP(
+        hidden_sizes,
+        input_size,
+        output_size,
+        bias=bias,
+    )
 
-    # Check types and sizes of layers
-    # Indices of Linear layers (0, 2, 4, ...)
-    linear_layer_indices = range(0, len(layers), 2)
-    for i, layer in enumerate(layers):
-        if i in linear_layer_indices:
-            assert isinstance(layer, nn.Linear)
-            assert layer.in_features == expected_layer_sizes[i // 2][0]
-            assert layer.out_features == expected_layer_sizes[i // 2][1]
+    assert isinstance(model, MLP)
+
+    for i, layer in enumerate(model.layers):
+        assert isinstance(layer, Layer)
+        assert isinstance(layer.linear, nn.Linear)
+
+        # Check the in/out feature sizes of Linear layers
+        assert layer.linear.in_features == expected_layer_sizes[i][0]
+        assert layer.linear.out_features == expected_layer_sizes[i][1]
+        # Check bias is not None when bias is True, and None otherwise
+        assert layer.linear.bias is not None if bias else layer.linear.bias is None
+
+        if i < len(model.layers) - 1:
+            # Activation layers at indices before the last layer
+            assert isinstance(layer.activation, nn.ReLU)
         else:
-            # ReLU layers at other indices
-            assert isinstance(layer, nn.ReLU)
+            # No activation function for the last layer
+            assert not hasattr(layer, "activation")

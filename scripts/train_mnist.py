@@ -105,6 +105,8 @@ def train(config: Config) -> None:
             images, labels = images.to(device), labels.to(device)
 
             samples += images.shape[0]
+            # Flatten the images
+            images = images.view(images.shape[0], -1)
 
             outputs = model(images)
             loss = criterion(outputs, labels)
