@@ -32,4 +32,4 @@ done
 mv mypkg $new_package_name
 
 # Use the provided pre-commit file
-cp pre-commit .git/hooks/pre-commit
+cp .pre-commit .git/hooks/pre-commit

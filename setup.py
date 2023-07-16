@@ -26,7 +26,6 @@ setup(
             "pytest",
             "types-PyYAML",
             "types-tqdm",
-            "pre-commit",
         ]
     },
     classifiers=[
