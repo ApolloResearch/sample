@@ -34,7 +34,11 @@ Suggested extensions and settings for VSCode are provided in `.vscode/`.
 
 ### Pre-commit hooks
 
-This repository uses [pre-commit](https://pre-commit.com/) to run a series of checks on the code before committing. These are installed with the development dependencies above.
+A pre-commit hook that runs black, isort, mypy, and tests is saved in the `.pre-commit` file. If
+you ran the `setup_pkg.sh` as instructed earlier, this pre-commit will be automatically setup.
+Otherwise, you can copy it to the `.git/hooks/`
+dir and make it executable
+(`cp .pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit`).
 
 ## Usage
 
