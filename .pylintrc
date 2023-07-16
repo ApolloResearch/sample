@@ -190,6 +190,8 @@ good-names=i,
            k,
            ex,
            Run,
+           fn,
+           ax,
            _
 
 # Good variable names regexes, separated by a comma. If names match any regex,
@@ -435,7 +437,9 @@ disable=raw-checker-failed,
         unspecified-encoding,
         not-callable,
         wrong-import-order,
-        missing-module-docstring
+        missing-module-docstring,
+        too-many-arguments,
+        redefined-outer-name,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -562,7 +566,8 @@ contextmanager-decorators=contextlib.contextmanager
 # List of members which are set dynamically and missed by pylint inference
 # system, and so shouldn't trigger E1101 when accessed. Python regular
 # expressions are accepted.
-generated-members=
+generated-members=numpy.*,
+                  torch.*
 
 # Tells whether to warn about missing members when the owner of the attribute
 # is inferred to be None.
