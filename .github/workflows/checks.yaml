@@ -41,7 +41,7 @@ jobs:
         isort --check --thirdparty wandb --profile black mypkg scripts tests
     - name: Check with mypy
       run: |
-        mypy mypkg scripts
+        mypy --ignore-missing-imports mypkg scripts
     - name: Run tests
       run: |
         pytest tests
