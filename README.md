@@ -10,7 +10,7 @@ If you wish to use this repository as a template for your project, copy the cont
 
 with the name of your package as the argument. This will rename the package and set up the pre-commit hooks. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
 
-## Dislosure level
+## Disclosure level
 
 You must set the disclosure level of your repository in `ACCESS.md`, listing all parties that can access the project. See [disclosure levels](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy#Rules) for more information.
 
