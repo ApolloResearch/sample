@@ -1,7 +1,7 @@
-# Disclosure Level - Private
+# Disclosure Level - Public
 
 # Persons/Groups with access
 
-- Apollo
+- The world
 
 See disclosure levels [here](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy#Rules)
