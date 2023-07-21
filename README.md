@@ -12,7 +12,7 @@ with the name of your package as the argument. This will rename the package and 
 
 ## Dislosure level
 
-You must set the disclosure level of your repository in `ACCESS.md`, listing all parties that can access the project. See [disclosure levels](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy) for more information.
+You must set the disclosure level of your repository in `ACCESS.md`, listing all parties that can access the project. See [disclosure levels](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy#Rules) for more information.
 
 ## Installation
 
