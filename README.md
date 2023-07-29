@@ -1,6 +1,6 @@
 # Sample project
 
-This is a sample project that uses the engineering practices described in [Apollo Engineering Guide](https://docs.google.com/document/d/1O6qFI93XjZPIltSELs18v8jEIOclvOinQsRCQkmsD64/edit#heading=h.vznvxqme70zl).
+This is a sample project that uses the engineering practices described in [Apollo Engineering Guide](https://docs.google.com/document/d/1LJedFJKrGs7vi-xA1ucQQxj_y85Z9x4lEmf4sFgeX6g/edit).
 
 If you wish to use this repository as a template for your project, copy the contents of this directory to your new repository and run
 
@@ -10,9 +10,9 @@ If you wish to use this repository as a template for your project, copy the cont
 
 with the name of your package as the argument. This will rename the package and set up the pre-commit hooks. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
 
-## Disclosure level
+## Privacy level
 
-You must set the disclosure level of your repository in `ACCESS.md`, listing all parties that can access the project. See [disclosure levels](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy#Rules) for more information.
+You must set the privacy level of your repository in `ACCESS.md`, listing all parties that can access the project. See our [privacy levels](https://www.apolloresearch.ai/blog/security) for more information.
 
 ## Installation
 
