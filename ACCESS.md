@@ -4,4 +4,4 @@
 
 - The world
 
-See disclosure levels [here](https://www.lesswrong.com/posts/Gs29k3beHiqWFZqnn/conjecture-internal-infohazard-policy#Rules)
+See Privacy Levels [here](https://www.apolloresearch.ai/blog/security)
