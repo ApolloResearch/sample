@@ -5,7 +5,7 @@ This is a sample project that uses the engineering practices described in [Apoll
 If you wish to use this repository as a template for your project, simply click `Use this template -> Create a new repository` on the Github UI. Once your repository is created, run
 
 ```bash
-./setup_pkg.sh <name_of_your_package>
+chmod +x setup_pkg.sh && ./setup_pkg.sh <name_of_your_package>
 ```
 
 with the name of your package as the argument. This will rename the package and set up the pre-commit hooks. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
