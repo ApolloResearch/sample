@@ -2,7 +2,7 @@
 
 This is a sample project that uses the engineering practices described in [Apollo Engineering Guide](https://docs.google.com/document/d/1LJedFJKrGs7vi-xA1ucQQxj_y85Z9x4lEmf4sFgeX6g/edit).
 
-If you wish to use this repository as a template for your project, copy the contents of this directory to your new repository and run
+If you wish to use this repository as a template for your project, simply click `Use this template -> Create a new repository` on the Github UI. Once your repository is created, run
 
 ```bash
 ./setup_pkg.sh <name_of_your_package>
