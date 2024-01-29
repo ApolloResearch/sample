@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 import torch
 import yaml
@@ -8,7 +8,7 @@ from torch import nn
 from mypkg.log import logger
 
 
-def save_model(config_dict: Dict[str, Any], save_dir: Path, model: nn.Module, epoch: int) -> None:
+def save_model(config_dict: dict[str, Any], save_dir: Path, model: nn.Module, epoch: int) -> None:
     # If the save_dir doesn't exist, create it and save the config
     if not save_dir.exists():
         save_dir.mkdir(parents=True)

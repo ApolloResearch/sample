@@ -1,5 +1,3 @@
-from typing import Tuple
-
 import pytest
 from torch import nn
 
@@ -21,7 +19,7 @@ from mypkg.models.mlp import Layer
 def test_mlp_layers(
     hidden_sizes: list[int],
     bias: bool,
-    expected_layer_sizes: list[Tuple[int, int]],
+    expected_layer_sizes: list[tuple[int, int]],
 ) -> None:
     """Test the MLP constructor for fixed input and output sizes.
 
