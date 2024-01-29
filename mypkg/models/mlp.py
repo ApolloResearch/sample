@@ -1,7 +1,6 @@
 """
 Defines a generic MLP.
 """
-from typing import List, Optional
 
 import torch
 from torch import nn
@@ -53,7 +52,7 @@ class MLP(nn.Module):
 
     def __init__(
         self,
-        hidden_sizes: Optional[List[int]],
+        hidden_sizes: list[int] | None,
         input_size: int,
         output_size: int,
         bias: bool = True,
@@ -80,5 +79,5 @@ class MLP(nn.Module):
             )
         self.layers = nn.Sequential(*layers)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(self, x: torch.Tensor):
         return self.layers(x)

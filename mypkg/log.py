@@ -17,9 +17,9 @@ def setup_logger(logfile: Path = DEFAULT_LOGFILE) -> logging.Logger:
 
     Example:
         >>> logger = setup_logger()
-        >>> logger.debug('Debug message')
-        >>> logger.info('Info message')
-        >>> logger.warning('Warning message')
+        >>> logger.debug("Debug message")
+        >>> logger.info("Info message")
+        >>> logger.warning("Warning message")
     """
     if not logfile.parent.exists():
         logfile.parent.mkdir(parents=True, exist_ok=True)
