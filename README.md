@@ -8,7 +8,7 @@ If you wish to use this repository as a template for your project, simply click 
 chmod +x setup_pkg.sh && ./setup_pkg.sh <name_of_your_package>
 ```
 
-with the name of your package as the argument. This will rename the package and set up the pre-commit hooks. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
+with the name of your package as the argument. This will rename the package. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
 
 ## Privacy level
 
@@ -34,11 +34,11 @@ Suggested extensions and settings for VSCode are provided in `.vscode/`.
 
 ### Pre-commit hooks
 
-A pre-commit hook that runs black, isort, mypy, and tests is saved in the `.pre-commit` file. If
-you ran the `setup_pkg.sh` as instructed earlier, this pre-commit will be automatically setup.
-Otherwise, you can copy it to the `.git/hooks/`
-dir and make it executable
-(`cp .pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit`).
+To set up the pre-commit hooks, run
+
+```bash
+pre-commit install
+```
 
 ## Usage
 

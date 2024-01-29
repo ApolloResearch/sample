@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# This script does the following:
+# This script automates the setup of a new Python package. It does the following:
 # 1. Replaces all instances of the string 'mypkg' with the first argument provided
 # 2. Renames the mypkg directory to the first argument provided
-# 3. Copies the pre-commit file to .git/hooks/pre-commit and makes it executable
+#
+# Usage:
+# ./setup_pkg.sh <new_package_name>
 
 if [ $# -eq 0 ]; then
     echo "No arguments provided. Please provide the new package name."
@@ -30,7 +32,3 @@ done
 
 # Also rename the mypkg directory
 mv mypkg $new_package_name
-
-# Use the provided pre-commit file
-cp .pre-commit .git/hooks/pre-commit
-chmod +x .git/hooks/pre-commit
