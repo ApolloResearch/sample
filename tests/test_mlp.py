@@ -58,3 +58,9 @@ def test_mlp_layers(
         else:
             # No activation function for the last layer
             assert not hasattr(layer, "activation")
+
+
+@pytest.mark.slow
+def test_sample_slow_test() -> None:
+    """This will be skipped if --runslow is not specified when running pytest."""
+    assert True
