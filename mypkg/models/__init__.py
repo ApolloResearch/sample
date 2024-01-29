@@ -1,1 +1,3 @@
-from .mlp import MLP  # noqa: F401
+from .mlp import MLP
+
+__all__ = ["MLP"]
