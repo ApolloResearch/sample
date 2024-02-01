@@ -14,7 +14,6 @@ def pytest_addoption(parser: Parser) -> None:
 
 def pytest_configure(config: Config) -> None:
     config.addinivalue_line("markers", "slow: mark test as slow to run")
-    config.addinivalue_line("markers", "skip_ci: mark test to be skipped in CI")
 
 
 def pytest_collection_modifyitems(config: Config, items: Iterable[Item]) -> None:
