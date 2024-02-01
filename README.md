@@ -8,7 +8,9 @@ If you wish to use this repository as a template for your project, simply click 
 chmod +x setup_pkg.sh && ./setup_pkg.sh <name_of_your_package>
 ```
 
-with the name of your package as the argument. This will rename the package. You should also provide your name and email address in `setup.py`. You may then wish to remove the files and content that you do not need for your project.
+with the name of your package as the argument. This will rename the package. You should also put
+your project details in the `[project]` entry in `pyproject.toml`. You may then wish to remove the
+files and content that you do not need for your project.
 
 ## Privacy level
 
@@ -16,29 +18,26 @@ You must set the privacy level of your repository in `ACCESS.md`, listing all pa
 
 ## Installation
 
-From the root of the repository, run
+From the root of the repository, run one of
 
 ```bash
-pip install -e .
+make install-dev  # To install the package, dev requirements and pre-commit hooks
+make install  # To just install the package (runs `pip install -e .`)
 ```
 
 ## Development
 
-To install the development dependencies, run
-
-```bash
-pip install -e ".[dev]"
-```
-
 Suggested extensions and settings for VSCode are provided in `.vscode/`. To use the suggested
 settings, copy `.vscode/example.settings.json` to `.vscode/settings.json`.
 
-### Pre-commit hooks
-
-To set up the pre-commit hooks, run
+There are various `make` commands that may be helpful
 
 ```bash
-pre-commit install
+make check  # Run pre-commit on all files (i.e. pyright, ruff linter, and ruff formatter)
+make type  # Run pyright on all files
+make format  # Run ruff linter and formatter on all files
+make test  # Run tests that aren't marked `slow`
+make test-all  # Run all tests
 ```
 
 ## Usage

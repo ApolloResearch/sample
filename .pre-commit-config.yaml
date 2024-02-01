@@ -17,7 +17,7 @@ repos:
         stages:
           - commit
 
-      - id: ruff-linter
+      - id: ruff-lint
         name: Ruff lint
         entry: ruff check
         args: ["--fix-only"]
