@@ -3,7 +3,7 @@
 This script takes ~40 seconds to run for 3 layers and 15 epochs on a CPU.
 
 Usage:
-    python scripts/train_mnist.py <path/to/config.yaml>
+    python scripts/train_mnist/run_train_mnist.py <path/to/config.yaml>
 """
 from datetime import datetime
 from pathlib import Path

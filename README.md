@@ -44,10 +44,11 @@ make test-all  # Run all tests
 
 ### MNIST
 
-To train an MLP on MNIST, define a config file (see `configs/mnist.yaml` for an example) and run
+The repo provides an example of an experiment which trains an MLP on MNIST. To run the experiment,
+define a yaml config file (or use the provided `scripts/train_mnist/mnist.yaml`) and run
 
 ```bash
-python scripts/train_mnist.py <path_to_config_file>
+python scripts/train_mnist/run_train_mnist.py <path_to_config_file>
 ```
 
 You may be asked to enter your wandb API key. You can find it in your [wandb account settings](https://wandb.ai/settings). Alternatively, to avoid entering your API key on program execution, you can set the environment variable `WANDB_API_KEY` to your API key.
