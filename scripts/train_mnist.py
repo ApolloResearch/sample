@@ -5,7 +5,6 @@ This script takes ~40 seconds to run for 3 layers and 15 epochs on a CPU.
 Usage:
     python scripts/train_mnist.py <path/to/config.yaml>
 """
-import json
 from datetime import datetime
 from pathlib import Path
 
@@ -21,7 +20,7 @@ from tqdm import tqdm
 
 from mypkg.log import logger
 from mypkg.models import MLP
-from mypkg.utils import save_model
+from mypkg.utils import save_model_and_config
 
 
 class ModelConfig(BaseModel):
@@ -136,7 +135,7 @@ def train(config: Config) -> None:
             and (epoch + 1) % config.train.save_every_n_epochs == 0
             or epoch == config.train.epochs - 1
         ):
-            save_model(json.loads(config.model_dump_json()), save_dir, model, epoch)
+            save_model_and_config(config=config, save_dir=save_dir, model=model, epoch=epoch)
 
 
 def main(config_path_str: str) -> None:
