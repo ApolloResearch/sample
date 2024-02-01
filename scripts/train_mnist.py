@@ -102,8 +102,6 @@ def train(config: Config) -> None:
 
     samples = 0
     # Training loop
-    # for epoch in tqdm(range(config.train.epochs), total=config.train.epochs, desc="Epochs"):
-    # Iterate through epochs, checking for the final epoch
     for epoch in tqdm(range(config.train.epochs), total=config.train.epochs, desc="Epochs"):
         for i, (images, labels) in enumerate(train_loader):
             images, labels = images.to(device), labels.to(device)
