@@ -30,7 +30,8 @@ To install the development dependencies, run
 pip install -e ".[dev]"
 ```
 
-Suggested extensions and settings for VSCode are provided in `.vscode/`.
+Suggested extensions and settings for VSCode are provided in `.vscode/`. To use the suggested
+settings, copy `.vscode/example.settings.json` to `.vscode/settings.json`.
 
 ### Pre-commit hooks
 
