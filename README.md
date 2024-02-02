@@ -28,7 +28,7 @@ make install  # To just install the package (runs `pip install -e .`)
 ## Development
 
 Suggested extensions and settings for VSCode are provided in `.vscode/`. To use the suggested
-settings, copy `.vscode/example.settings.json` to `.vscode/settings.json`.
+settings, copy `.vscode/settings-example.json` to `.vscode/settings.json`.
 
 There are various `make` commands that may be helpful
 
