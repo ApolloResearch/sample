@@ -1,5 +1,3 @@
-# [short name for PR]
-
 ## Description
 <!--- Describe your changes in detail -->
 
