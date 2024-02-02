@@ -1,3 +1,14 @@
+"""Setup a logger to be used in all modules in the library.
+
+To use the logger, import it in any module and use it as follows:
+    
+    ```
+    from mypkg.log import logger
+    logger.info("Info message")
+    logger.warning("Warning message")
+    ```
+"""
+
 import logging
 from logging.config import dictConfig
 from pathlib import Path
