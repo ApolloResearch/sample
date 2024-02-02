@@ -53,8 +53,11 @@ select = [
 # Enable reformatting of code snippets in docstrings.
 docstring-code-format = true
 
+[tool.ruff.isort]
+known-third-party = ["wandb"]
+
 [tool.pyright]
-include = ["mypkg", "scripts", "tests"]
+include = ["mypkg", "tests"]
 
 strictListInference = true
 strictDictionaryInference = true
