@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "ms-toolsai.jupyter",
-        "github.copilot",
         "ms-python.python",
         "charliermarsh.ruff",
         "stkb.rewrap"
